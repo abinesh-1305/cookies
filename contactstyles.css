@@ -1,0 +1,27 @@
+body {
+    background-color: rgba(238, 144, 245, 0.86);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  p {
+    text-align: center;
+    color: black;
+  }
+  
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 10%;
+  }
+  
+  h3 {
+    color: black;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  

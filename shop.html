@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Place An Order</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="shopstyles.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-4">Place An Order</h1><br>
+    <div class="content">
+        <form action="http://localhost:3000/sign_up" method="post" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="emailInput">Enter E-Mail/Mobile number:</label>
+                <input type="text" class="form-control" id="emailInput" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pincodeInput">Enter a pincode:</label>
+                <input type="text" class="form-control" id="pincodeInput" name="pincode" required>
+            </div>
+
+            <div class="form-group">
+                <label for="addressInput">Address:</label>
+                <textarea class="form-control" id="addressInput" name="address" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="biscuitType">BISCUIT TYPE</label>
+                <select class="form-control" id="biscuitType" name="biscuit" required>
+                    <option value="CASHEWCOOKIE">CASHEWCOOKIE</option>
+                    <option value="BUTTERCOOKIE">BUTTERCOOKIE</option>
+                    <option value="CHOCOLATECOOKIE">CHOCOLATECOOKIE</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="paymentMethodSelect">Payment Method:</label>
+                <select class="form-control" id="paymentMethodSelect" name="paymentMethod" required>
+                    <option value="None">None</option>
+                    <option value="Cash on Delivery">Cash on Delivery</option>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Debit Card">Debit Card</option>
+                    <option value="Bank Transfer">Bank Transfer</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+            <button type="reset" class="btn btn-secondary" id="clearButton">Clear</button>
+        </form>
+
+        <br>
+        <br>
+        <a href="home.html" style="color: black;">Go Back Home</a><br><br>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        function validateForm() {
+            var email = document.getElementById("emailInput").value;
+            var pincode = document.getElementById("pincodeInput").value;
+            var address = document.getElementById("addressInput").value;
+            var biscuit = document.getElementById("biscuitType").value;
+            var paymentMethod = document.getElementById("paymentMethodSelect").value;
+            
+            if (email === "" || pincode === "" || address === "" || biscuit === "None" || paymentMethod === "None") {
+                alert("Please fill out all fields.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</div>
+</body>
+</html>

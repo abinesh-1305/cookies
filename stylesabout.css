@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+.header img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+.about-content {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.about-content h1 {
+    color: #fff;
+}
+
+.about-content h2 {
+    color: #fff;
+}
+
+.about-content p {
+    color: #fff;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #666;
+}
